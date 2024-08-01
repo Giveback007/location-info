@@ -46,7 +46,7 @@
 
 
         /* -- Module Resolution Options -- */
-        "baseUrl": "./",
+        "baseUrl": ".",
         "paths": {
             "*": ["node_modules/*"]
         },
