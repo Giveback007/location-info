@@ -1,8 +1,8 @@
 <script lang="ts">
     import type { Component } from 'svelte';
-    import MapPin from '../../icons/map-pin.svelte'
-    import ChartBar from '../../icons/chart-bar.svelte';
-    import { currentRoute } from '../../store.svelte';
+    import MapPin from '../icons/map-pin.svelte'
+    import ChartBar from '../icons/chart-bar.svelte';
+    import { currentRoute } from '../store/route.store';
 
     let links: {
         name: str;
@@ -28,7 +28,7 @@
 
 </script>
 
-<aside class="fixed z-50 flex">
+<aside class="fixed top-0 z-50 flex">
     <div class="flex flex-col items-center w-16 h-screen py-8 bg-white border-r dark:bg-gray-900 dark:border-gray-700">
         <nav class="flex flex-col items-center flex-1 space-y-8 ">
             <a href="#">

@@ -1,3 +1,5 @@
+type WikiLoc = WikiPageInfo & GeoCodeLOC & { type: 'wiki-loc' };
+
 type GeoCodeLOC = {
     name:         string;
     local_names?: { [key: string]: string };
