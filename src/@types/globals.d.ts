@@ -1,6 +1,9 @@
 /** api-keys/secrets/etc... */
 type Secrets = {
     openWeather: str;
+    google: {
+        mapsEmbedded: str
+    }
 }
 
 type ENV = {

@@ -6,6 +6,6 @@
 </script>
 
 <Sidebar />
-<main class="pl-20">
+<main class="ml-16 pl-1 pr-1">
 {@render children()}
 </main>
