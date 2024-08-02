@@ -1,4 +1,4 @@
-// TODO: Finish implementing other types: https://merakiui.com/components/application-ui/alerts
+<!-- // TODO: Finish implementing other types: https://merakiui.com/components/application-ui/alerts -->
 <script lang="ts">
     import { fade, fly } from "svelte/transition";
     import { alertsState } from "../store/app.store";
@@ -17,7 +17,7 @@
                 x.remove()
                 delete dict[x.id]
             }, x.time || 5_000)
-        })
+        });
     })
 </script>
 
@@ -40,11 +40,17 @@
         <div class="px-4 py-2 -mx-3">
             <div class="mx-3">
                 <span class="font-semibold text-emerald-500 dark:text-emerald-400">{alert.title}</span>
-                <p class="text-sm text-gray-600 dark:text-gray-200">Your account was registered!</p>
+                <p class="text-sm text-gray-600 dark:text-gray-200">{alert.text}</p>
             </div>
         </div>
 
-        <button class="p-0.5 m-1 transition-colors duration-300 transform rounded-md hover:bg-opacity-25 hover:bg-gray-600 focus:outline-none">
+        <button
+            onclick={() => {
+                delete dict[alert.id];
+                alert.remove()
+            }}
+            class="p-0.5 m-1 transition-colors duration-300 transform rounded-md hover:bg-opacity-25 hover:bg-gray-600 focus:outline-none"
+        >
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 18L18 6M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>

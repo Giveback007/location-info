@@ -9,7 +9,7 @@ const appId = `Location-Info-V1`
 export function lsWritable<T>(initState: T, id: str) {
     const stateId = `${appId}-[${id}]`;
     const lsState = ls.get(stateId)
-    let state = (lsState === '__null__' ? null : initState) as T;
+    let state = (lsState === '__null__' ? null : lsState || initState) as T;
 
     const wr = writable<T>(state);
     wr.subscribe(s => ls.set(stateId, s === null ? '__null__' : s))

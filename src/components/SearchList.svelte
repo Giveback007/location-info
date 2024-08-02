@@ -1,7 +1,7 @@
 <script lang="ts">
     import { slide } from 'svelte/transition';
     import EmbeddedMap from './EmbeddedMap.svelte';
-    import { locations } from '../store/app.store';
+    import { addAlert, locations } from '../store/app.store';
 
     let {
         isOpen, data
@@ -13,7 +13,12 @@
     function handleClick(x: GeoCodeLoc) {
         locations.update(dict => {
             dict[x.id] = x;
-            // log(dict)
+            addAlert({
+                title: `Added: ${x.name}`,
+                text: x.fullName,
+                type: 'success',
+                time: 5000,
+            })
             return dict;
         })
     }
