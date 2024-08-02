@@ -29,7 +29,7 @@
 </script>
 
 <aside class="fixed top-0 z-50 flex">
-    <div class="flex flex-col items-center w-16 h-screen py-8 bg-white border-r dark:bg-gray-900 dark:border-gray-700">
+    <div class="flex flex-col items-center w-16 h-screen py-8 bg-slate-50 border-r dark:bg-gray-900 dark:border-gray-700">
         <nav class="flex flex-col items-center flex-1 space-y-8 ">
             <a href="#">
                 <img class="w-auto h-6" src="https://merakiui.com/images/logo.svg" alt="">
@@ -44,8 +44,6 @@
                     <svelte:component this={link.img} />
                 </a>
             {/each}
-
-
         </nav>
 
         <div class="flex flex-col items-center mt-4 space-y-4">

@@ -1,6 +1,20 @@
-// type WikiLoc = WikiPageInfo & GeoCodeLOC & { type: 'wiki-loc' };
+type AlertType = 'success' | 'info' | 'warning' | 'error' | 'notification';
 
-type GeoCodeLOC = {
+type Alert = {
+    type: AlertType;
+    title: str;
+    size?: 'reg' | 'wide'
+    time?: num;
+    text?: str;
+}
+
+type AlertProps = Alert & {
+    id: str | num,
+    remove: () => any,
+    toDelete?: bol;
+}
+
+type _GeoCodeLoc = {
     name:         string;
     local_names?: { [key: string]: string };
     lat:          number;
@@ -8,6 +22,14 @@ type GeoCodeLOC = {
     country:      string;
     state?:        string;
 }
+
+type GeoCodeLoc = {
+    fullName: str;
+    id: str;
+    wiki?: {
+
+    }
+} & _GeoCodeLoc;
 
 type WikiPageSearch = {
     pages: WikiPageInfo[];

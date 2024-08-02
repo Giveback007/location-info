@@ -1,30 +1,31 @@
 <script lang="ts">
     import { slide } from 'svelte/transition';
     import EmbeddedMap from './EmbeddedMap.svelte';
+    import { locations } from '../store/app.store';
 
     let {
         isOpen, data
     }: {
-        isOpen: bol;
-        data: GeoCodeLOC[];
+        isOpen: bol,
+        data: GeoCodeLoc[];
     } = $props()
 
-    function handleClick(data: GeoCodeLOC) {
-        log(data)
+    function handleClick(x: GeoCodeLoc) {
+        locations.update(dict => {
+            dict[x.id] = x;
+            // log(dict)
+            return dict;
+        })
     }
-
-    log({data})
 </script>
 
 {#if isOpen}
 <div
     transition:slide="{{delay: 250, duration: 500 }}"
-    class="z-20 mt-2 overflow-hidden bg-white rounded-md shadow-lg dark:bg-gray-800"
+    class="mt-2 overflow-hidden bg-white rounded-md shadow-lg dark:bg-gray-800"
 >
     <div>
         {#each data as x}
-            {@const stateCountry = (x.state ? `${x.state}, ${x.country}` : x.country)}
-
             <!-- svelte-ignore a11y_click_events_have_key_events -->
             <!-- svelte-ignore a11y_no_static_element_interactions -->
             <!-- svelte-ignore a11y_missing_attribute -->
@@ -40,7 +41,7 @@
                 <div class="search-text flex flex-1 items-center px-4 py-3 -mx-2 transition-colors duration-300 transform hover:opacity-80 hover:bg-gray-200 dark:hover:bg-gray-700">
                     <p class="mx-2 text-sm text-gray-600 dark:text-white">
                     <b class="font-bold">{x.name}</b>
-                    <br>{stateCountry}
+                    <br>{x.fullName}
                     <br><span>[{x.lat}, {x.lon}]</span>
                 </div>
             </a>
