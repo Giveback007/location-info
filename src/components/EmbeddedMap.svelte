@@ -25,19 +25,21 @@
 
 <div
     style={style}
-    class={_class}
+    class={'group relative ' + _class}
 >
 {#if isLoading}
     <div
-        transition:fade="{{delay: 500, duration: 1250}}"
-        class={`p-10 w-full h-full bg-slate-200`}
+        transition:fade="{{delay: 500, duration: 750}}"
+        class="absolute p-10 w-full h-full bg-slate-100"
     ><OvalLoader /></div>
+{:else}
+    <h3 class="absolute invisible group-hover:visible right-0 bg-slate-800 text-lg px-1 drop-shadow-md text-white font-bold">Click to open map</h3>
 {/if}
 
 <iframe
+    class="hover:opacity-50"
     width=100%
     height=100%
-    class={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
     title="Google Maps"
     loading="lazy"
     allowfullscreen={true}

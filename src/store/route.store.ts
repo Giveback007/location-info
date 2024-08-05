@@ -2,15 +2,24 @@ import { writable } from 'svelte/store';
 
 export type Routes = '/' | 'locations' | 'charts' | '404'
 
-const initPath = location.hash.slice(1) || '/'
+const initPath = getHashPath()
 export const currentRoute = writable(initPath === 'home' ? '/' : initPath);
 
 addEventListener('hashchange', () => {
-    const hash = location.hash.slice(1) || '/';
+    const path = getHashPath()
 
-    if (hash === 'home') {
+    if (path === 'home') {
         window.location.assign("/");
     } else {
-        currentRoute.set(hash)
+        currentRoute.set(path)
     }
 });
+
+function getHashPath() {
+    if (location.pathname !== '/') {
+        const path = location.pathname.replace('/', '');
+        history.pushState(null, path, `/#${path}`)
+    }
+
+    return location.hash.slice(1) || '/';
+}

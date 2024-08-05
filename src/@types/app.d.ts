@@ -1,7 +1,7 @@
 type AlertType = 'success' | 'info' | 'warning' | 'error' | 'notification';
 
 type Alert = {
-    type: AlertType;
+    type?: AlertType;
     title: str;
     size?: 'reg' | 'wide'
     time?: num;

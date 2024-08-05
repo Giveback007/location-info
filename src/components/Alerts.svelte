@@ -1,5 +1,6 @@
-<!-- // TODO: Finish implementing other types: https://merakiui.com/components/application-ui/alerts -->
 <script lang="ts">
+    // TODO: Finish implementing other types: https://merakiui.com/components/application-ui/alerts
+
     import { fade, fly } from "svelte/transition";
     import { alertsState } from "../store/app.store";
     import { quintOut } from "svelte/easing";
@@ -21,10 +22,8 @@
     })
 </script>
 
-<div
-    class="fixed bottom-5 right-5 z-50 flex flex-col space-y-1"
->
-    {#each arr as alert (alert.id)}
+<div class="fixed bottom-5 right-5 z-50 flex flex-col space-y-1">
+{#each arr as alert (alert.id)}
     <div
         animate:flip="{{duration: 1500, easing: quintOut}}"
         in:fly="{{delay: 0, duration: 750, x: 300, y: 25, opacity: 0.5, easing: quintOut}}"
@@ -37,12 +36,12 @@
             </svg>
         </div>
 
-        <div class="px-4 py-2 -mx-3">
-            <div class="mx-3">
-                <span class="font-semibold text-emerald-500 dark:text-emerald-400">{alert.title}</span>
+        <div class="px-4 py-2 -mx-3"><div class="mx-3">
+            <span class="font-semibold text-emerald-500 dark:text-emerald-400">{alert.title}</span>
+            {#if alert.text}
                 <p class="text-sm text-gray-600 dark:text-gray-200">{alert.text}</p>
-            </div>
-        </div>
+            {/if}
+        </div></div>
 
         <button
             onclick={() => {
