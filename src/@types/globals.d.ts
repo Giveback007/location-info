@@ -1,8 +1,9 @@
 /** api-keys/secrets/etc... */
 type Secrets = {
+    pocketbase: str;
     openWeather: str;
     google: {
-        mapsEmbedded: str
+        mapsEmbedded: str;
     }
 }
 

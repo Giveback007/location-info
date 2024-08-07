@@ -9,6 +9,7 @@
         '/': async () => import('./Home.page.svelte'),
         'locations': () => import('./Locations.page.svelte'),
         'charts': () => import('./Charts.page.svelte'),
+        'test': () => import('./Test.page.svelte'),
         '404': () => import("./P404.page.svelte"),
     }
 
