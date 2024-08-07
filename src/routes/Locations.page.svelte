@@ -24,7 +24,7 @@
     // }
 
     async function searchGeo(search: str): Promise<GeoCodeLoc[]> {
-        const url = makeUrl('http://api.openweathermap.org/geo/1.0/direct', {
+        const url = makeUrl('https://api.openweathermap.org/geo/1.0/direct', {
             q: search,
             limit: '5',
             appid: keys.openWeather
