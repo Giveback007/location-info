@@ -1,5 +1,7 @@
 # Tailwind Components:
-https://merakiui.com/components
+- https://merakiui.com/components
+- https://tailwindflex.com/
 
 # Icons:
-https://heroicons.com/
+- https://heroicons.com/
+
