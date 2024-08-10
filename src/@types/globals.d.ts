@@ -1,3 +1,9 @@
+const Num = Number;
+const Str = String;
+const Bol = Boolean;
+const Obj = Object;
+const Arr = Array;
+
 /** api-keys/secrets/etc... */
 type Secrets = {
     pocketbase: str;

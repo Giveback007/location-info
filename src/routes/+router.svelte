@@ -11,6 +11,7 @@
         'charts': () => import('./Charts.page.svelte'),
         'test': () => import('./Test.page.svelte'),
         '404': () => import("./P404.page.svelte"),
+        "ui-test": () => import('./UI-Test.page.svelte'),
     }
 
     onMount(() => {

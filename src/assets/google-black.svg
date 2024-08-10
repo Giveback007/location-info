@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1080" height="1080" viewBox="0 0 1080 1080" xml:space="preserve">
+<defs>
+</defs>
+<g transform="matrix(1 0 0 1 540 540)" id="777b083f-8863-4270-95d5-4a65918a6a3f"  >
+<rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; visibility: hidden;" vector-effect="non-scaling-stroke"  x="-540" y="-540" rx="0" ry="0" width="1080" height="1080" />
+</g>
+<g transform="matrix(1 0 0 1 540 540)" id="0711da58-35ab-4fea-b85c-13732b3d58a7"  >
+</g>
+<g transform="matrix(67.5 0 0 67.5 540 540)"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"  transform=" translate(-7.81, -13.9)" d="M 15.4391 14.0859 C 15.4391 18.5234 12.4078 21.6484 7.93906 21.6484 C 3.62656 21.6484 0.189063 18.2109 0.189063 13.8984 C 0.189063 9.61719 3.62656 6.14844 7.93906 6.14844 C 10.0016 6.14844 11.7828 6.92969 13.1266 8.17969 L 11.0016 10.2109 C 8.25156 7.55469 3.12656 9.55469 3.12656 13.8984 C 3.12656 16.6172 5.28281 18.8047 7.93906 18.8047 C 11.0016 18.8047 12.1578 16.6172 12.3141 15.4609 L 7.93906 15.4609 L 7.93906 12.8047 L 15.3141 12.8047 C 15.3766 13.2109 15.4391 13.5859 15.4391 14.0859 Z" stroke-linecap="round" />
+</g>
+</svg>

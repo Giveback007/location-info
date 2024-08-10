@@ -2,7 +2,11 @@ type num = number;
 type str = string;
 type bol = boolean;
 
-type obj<v = any, k = string> = { [key: k]: v };
+type obj<
+    val,
+    key extends string = string> = {
+        [K in key]: val
+}
 
 type Dict<T> = { [id: string]: T };
 

@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-export type Routes = '/' | 'locations' | 'charts' | '404' | 'test'
+export type Routes = '/' | 'locations' | 'charts' | '404' | 'test' | 'ui-test'
 
 const initPath = getHashPath()
 export const currentRoute = writable(initPath === 'home' ? '/' : initPath);

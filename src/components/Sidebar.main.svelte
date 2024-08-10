@@ -5,6 +5,7 @@
     import { currentRoute } from '../store/route.store';
     import globWeatherSVG from '../assets/global-weather.svg'
     import CircleStack from '../icons/circle-stack.icon.svelte';
+    import Squares_2x2 from '../icons/squares-2x2.svelte';
 
     let links: {
         name: str;
@@ -20,9 +21,13 @@
         href: 'charts',
         img: ChartBar,
     }, {
-        name: "PB-Test",
+        name: "DB-Test",
         href: 'test',
         img: CircleStack
+    }, {
+        name: "UI-Test",
+        href: "ui-test",
+        img: Squares_2x2,
     }]);
 
     currentRoute.subscribe(route => {
